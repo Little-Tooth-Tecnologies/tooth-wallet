@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Little Tooth Wallet</string>
+    <string name="walkthrough_begin_title">FINANÇAS PESSOAIS TÃO SIMPLES QUANTO UM SORRISO</string>
+    <string name="walkthrough_begin_description">Confiável, Projetado Para Tornar O Gerenciamento de Finanças Pessoais Tão Simples Quanto Um Sorriso.</string>
+    <string name="walkthrough_begin_button">Começar</string>
+    <string name="walkthrough_begin_login">Já tenho uma conta</string>
 </resources>

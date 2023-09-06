@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="semibranco">#D8D8D8</color>
+    <color name="texto_semibranco">#E4E4E4</color>
+    <color name="verde_menta">#A1E3AF</color>
+    <color name="verde_menta1.5">#65C393</color>
+    <color name="verde_menta2">#29A276</color>
+    <color name="amarelo">#FFD52D</color>
 </resources>
