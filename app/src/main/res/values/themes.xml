@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.LittleToothWallet" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.LittleToothWallet" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/verde_menta</item>
     </style>
 
     <style name="Theme.LittleToothWallet" parent="Base.Theme.LittleToothWallet" />

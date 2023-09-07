@@ -5,8 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_walkthrough"
-    tools:context=".MainActivity">
+    tools:context=".CadastroActivity">
 
-<!--TODO: tela inicial do app, por enquanto é pra ter uma lógica q atira ele pra activity_welcome.xml -->
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
