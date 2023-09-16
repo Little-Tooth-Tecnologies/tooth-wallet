@@ -3,6 +3,7 @@ package com.example.littletoothwallet
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
@@ -14,28 +15,30 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        val textView = findViewById<TextView>(R.id.textView)
-        val fullText = getString(R.string.lazyRegister_begin_title)
+        val text = getString(R.string.lazyRegister_begin_title)
 
-        // SpannableString a partir do texto completo
-        val spannableString = SpannableString(fullText)
+        val words = text.split(" ")
+        val endWords = words.last()
 
-        //posição do texto que vai ficar amarelow
-        val startIndex = fullText.indexOf("SORRISO")
-        val endIndex = startIndex + "SORRISO".length
+        val spannableString = SpannableString(text)
 
-        // deixando negro
-        val boldSpan = StyleSpan(Typeface.BOLD)
-        spannableString.setSpan(boldSpan, startIndex, endIndex, 0)
+        val startIndex = text.indexOf(endWords)
+        val endIndex = startIndex + endWords.length
+        spannableString.setSpan(
+            ForegroundColorSpan(Color.YELLOW),
+            startIndex,
+            endIndex,
+            Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+        )
 
-        // deixando ele yellow
-        val yellowColorSpan = ForegroundColorSpan(Color.YELLOW)
-        spannableString.setSpan(yellowColorSpan, startIndex, endIndex, 0)
+        spannableString.setSpan(
+            StyleSpan(Typeface.BOLD),
+            startIndex,
+            endIndex,
+            Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+        )
 
-        // Definindo :)
-        textView.text = spannableString
-
-        // TODO: Lógica do botão pra levar ao CadastroActivity/LoginActivity(esse n existe)
+        findViewById<TextView>(R.id.slogan).text = spannableString
     }
 
 }

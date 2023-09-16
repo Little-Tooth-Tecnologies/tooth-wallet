@@ -40,5 +40,11 @@
     <string name="loading_step2">Atualizando Tabelas...</string>
     <string name="loading_step3">Verificando Base de Dados</string>
 
+    <string-array name="loading_steps">
+        <item>@string/loading_step1</item>
+        <item>@string/loading_step2</item>
+        <item>@string/loading_step3</item>
+    </string-array>
+
 
 </resources>
