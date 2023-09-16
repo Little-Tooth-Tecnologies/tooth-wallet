@@ -9,5 +9,5 @@ import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.widget.TextView
 class MainActivity : AppCompatActivity() {
-//    TODO: logica que vai ver se o cara tá logado ou não, se não tiver envia ele pra WelcomeActivity
+    
 }

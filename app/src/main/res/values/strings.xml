@@ -1,6 +1,8 @@
 <resources>
     // APP Name
     <string name="app_name">Tooth Wallet</string>
+    <string name="app_logo">Logo Empresa Circle</string>
+    <string name="tooth_loading">tooth_loading</string>
 
     // Walkthrough Constants
     <string name="lazyRegister_begin_title">
@@ -37,5 +39,6 @@
     <string name="loading_step1">Aguarde, Carregando...</string>
     <string name="loading_step2">Atualizando Tabelas...</string>
     <string name="loading_step3">Verificando Base de Dados</string>
+
 
 </resources>

@@ -15,7 +15,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         val textView = findViewById<TextView>(R.id.textView)
-        val fullText = getString(R.string.walkthrough_begin_title)
+        val fullText = getString(R.string.lazyRegister_begin_title)
 
         // SpannableString a partir do texto completo
         val spannableString = SpannableString(fullText)
