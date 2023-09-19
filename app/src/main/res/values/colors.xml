@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#2B2B2B</color>
+    <color name="semi_black">#282828</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="semibranco">#D8D8D8</color>
-    <color name="texto_semibranco">#E4E4E4</color>
-    <color name="verde_menta">#A1E3AF</color>
-    <color name="verde_menta1.5">#65C393</color>
-    <color name="verde_menta2">#29A276</color>
-    <color name="amarelo">#FFD52D</color>
+    <color name="semi_white">#D8D8D8</color>
+    <color name="text_semiwhite">#E4E4E4</color>
+    <color name="verde_menta_primary">#A1E3AF</color>
+    <color name="verde_menta_secondary">#65C393</color>
+    <color name="verde_menta_dark">#29A276</color>
+    <color name="yellow">#FFD52D</color>
 </resources>

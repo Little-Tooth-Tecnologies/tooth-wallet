@@ -1,7 +1,50 @@
 <resources>
-    <string name="app_name">Little Tooth Wallet</string>
-    <string name="walkthrough_begin_title">FINANÇAS PESSOAIS TÃO SIMPLES QUANTO UM SORRISO</string>
-    <string name="walkthrough_begin_description">Confiável, Projetado Para Tornar O Gerenciamento de Finanças Pessoais Tão Simples Quanto Um Sorriso.</string>
-    <string name="walkthrough_begin_button">Começar</string>
-    <string name="walkthrough_begin_login">Já tenho uma conta</string>
+    // APP Name
+    <string name="app_name">Tooth Wallet</string>
+    <string name="app_logo">Logo Empresa Circle</string>
+    <string name="tooth_loading">tooth_loading</string>
+
+    // Walkthrough Constants
+    <string name="lazyRegister_begin_title">
+        FINANÇAS PESSOAIS
+        TÃO SIMPLES QUANTO UM SORRISO
+    </string>
+
+    <string name="lazyRegister_begin_description">
+        Confiável, Projetado Para Tornar o
+        Gerenciamento de Finanças Pessoais Tão Simples Quanto Um Sorriso.
+    </string>
+    
+    <string name="lazyRegisterDone">
+        Cadastro Realizado com sucesso!
+    </string>
+
+    <string name="lazyRegisterRedirect">
+        Estamos Redirecionando você para a tela principal
+    </string>
+
+    <string name="lazyRegisterWelcome">
+        Bem Vindo ao Tooth Wallet
+    </string>
+
+    // Buttons Constants
+    <string name="login_button"> Acessar </string>
+    <string name="lazyRegister_begin_button">Começar</string>
+    <string name="lazyRegister_begin_login">Já tenho uma Conta</string>
+    <string name="lazyRegister_begin_register">Criar uma Conta</string>
+    <string name="lazyRegister_continue">Continuar</string>
+    
+
+    // Loading Constants
+    <string name="loading_step1">Aguarde, Carregando...</string>
+    <string name="loading_step2">Atualizando Tabelas...</string>
+    <string name="loading_step3">Verificando Base de Dados</string>
+
+    <string-array name="loading_steps">
+        <item>@string/loading_step1</item>
+        <item>@string/loading_step2</item>
+        <item>@string/loading_step3</item>
+    </string-array>
+
+
 </resources>
