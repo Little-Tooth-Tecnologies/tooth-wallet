@@ -2,6 +2,6 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.LittleToothWallet" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/verde_menta</item>
+        <item name="colorPrimary">@color/verde_menta_primary</item>
     </style>
 </resources>
