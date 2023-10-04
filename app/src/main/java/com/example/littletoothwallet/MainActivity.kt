@@ -7,7 +7,7 @@ import android.os.Handler
 import android.widget.TextView
 import kotlin.random.Random
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     // array de strings com as mensagens de loading
     private val loadingSteps: Array<String> by lazy {

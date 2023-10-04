@@ -14,13 +14,29 @@
         Confiável, Projetado Para Tornar o
         Gerenciamento de Finanças Pessoais Tão Simples Quanto Um Sorriso.
     </string>
+
+    <string name="lazyRegister_step1_description1">
+        Vamos Começar!
+    </string>
+
+    <string name="lazyRegister_step1_description2">
+        Qual é seu nome?
+    </string>
+
+    <string name="lazyRegister_step2_description1">
+        Certo! Continuando…
+    </string>
+
+    <string name="lazyRegister_step2_description2">
+        Qual será sua senha?
+    </string>
     
     <string name="lazyRegisterDone">
         Cadastro Realizado com sucesso!
     </string>
 
     <string name="lazyRegisterRedirect">
-        Estamos Redirecionando você para a tela principal
+        Estamos Redirecionando você para a tela principal…
     </string>
 
     <string name="lazyRegisterWelcome">
@@ -33,11 +49,12 @@
     <string name="lazyRegister_begin_login">Já tenho uma Conta</string>
     <string name="lazyRegister_begin_register">Criar uma Conta</string>
     <string name="lazyRegister_continue">Continuar</string>
-    
+    <string name="lazyRegister_return">Voltar</string>
+
 
     // Loading Constants
-    <string name="loading_step1">Aguarde, Carregando...</string>
-    <string name="loading_step2">Atualizando Tabelas...</string>
+    <string name="loading_step1" translatable="false">Aguarde, Carregando...</string>
+    <string name="loading_step2">Atualizando Tabelas…</string>
     <string name="loading_step3">Verificando Base de Dados</string>
 
     <string-array name="loading_steps">

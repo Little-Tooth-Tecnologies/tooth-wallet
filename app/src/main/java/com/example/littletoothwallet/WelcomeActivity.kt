@@ -1,16 +1,21 @@
 package com.example.littletoothwallet
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
+import android.view.View
+import android.view.WindowInsets
+import android.view.WindowInsetsController
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class WelcomeActivity : AppCompatActivity() {
+class WelcomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
@@ -39,6 +44,12 @@ class WelcomeActivity : AppCompatActivity() {
         )
 
         findViewById<TextView>(R.id.slogan).text = spannableString
+
+    }
+
+    fun startRegistration(view: View) {
+        val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
     }
 
 }

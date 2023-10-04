@@ -8,8 +8,8 @@
     tools:context=".WelcomeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="309dp"
-        android:layout_height="720dp"
+        android:layout_width="310dp"
+        android:layout_height="670dp"
         android:background="@drawable/bg_app_begin_box"
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,10 +33,12 @@
             android:id="@+id/button"
             android:layout_width="164dp"
             android:layout_height="50dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="76dp"
             android:background="@drawable/yellow_rounded"
             android:elevation="7dp"
             android:fontFamily="@font/roboto"
+            android:onClick="startRegistration"
             android:text="@string/lazyRegister_begin_button"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/black"
@@ -45,7 +47,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
         <TextView
             android:id="@+id/textView4"
@@ -75,14 +78,14 @@
 
         <TextView
             android:id="@+id/slogan"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="214dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="36dp"
             android:text="@string/lazyRegister_begin_title"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.182"
+            app:layout_constraintHorizontal_bias="0.312"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -90,11 +93,11 @@
             android:id="@+id/description"
             android:layout_width="250dp"
             android:layout_height="100dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:text="@string/lazyRegister_begin_description"
             android:textColor="@color/semi_white"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/slogan" />
 

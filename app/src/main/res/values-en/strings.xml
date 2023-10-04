@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tooth Wallet</string>
+    <string name="login_button">Login</string>
+    <string name="lazyRegister_begin_button">Begin</string>
+    <string name="lazyRegister_begin_login">" I already have an account"</string>
+    <string name="lazyRegister_begin_register">Create Account</string>
+    <string name="lazyRegister_continue">Continue</string>
+    <string name="lazyRegister_return">Back</string>
+    <string name="loading_step2">Updating tables...</string>
+    <string name="loading_step3">Checking Database</string>
+</resources>

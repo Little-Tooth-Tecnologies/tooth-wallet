@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LazyRegister1Fragment">
+
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="209dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/lazyRegister_step1_description1"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/TextView2"
+        android:layout_width="234dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lazyRegister_step1_description2"
+        android:textColor="@color/yellow"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="164dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/yellow_rounded"
+        android:elevation="7dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/lazyRegister_continue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="257dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/begin_box_phone" />
+</androidx.constraintlayout.widget.ConstraintLayout>
