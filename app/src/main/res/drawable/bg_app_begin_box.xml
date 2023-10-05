@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
-        android:startColor = "@color/verde_menta_primary"
-        android:centerColor="@color/verde_menta_secondary"
-        android:endColor = "@color/verde_menta_dark"
+        android:startColor = "@color/mint_green_primary"
+        android:centerColor="@color/mint_green_secondary"
+        android:endColor = "@color/mint_green_dark"
         android:angle="-90"
         android:radius="30pt"
         />

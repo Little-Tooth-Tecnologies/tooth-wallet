@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tooth Wallet</string>
+    <string name="app_logo">Circle Company Logo</string>
+    <string name="tooth_loading">tooth_loading</string>
+    <string name="lazyRegister_begin_title">PERSONAL FINANCE AS SIMPLE AS A SMILE</string>
+    <string name="lazyRegister_begin_description">Reliable, Designed to Make\n         Personal Finance Management As Simple As A Smile.</string>
+    <string name="lazyRegisterDone">Registration completed successfully!</string>
+    <string name="lazyRegisterRedirect">We are redirecting you to the main screen</string>
+    <string name="lazyRegisterWelcome">Welcome to Tooth Wallet</string>
     <string name="login_button">Login</string>
     <string name="lazyRegister_begin_button">Begin</string>
     <string name="lazyRegister_begin_login">" I already have an account"</string>
     <string name="lazyRegister_begin_register">Create Account</string>
     <string name="lazyRegister_continue">Continue</string>
     <string name="lazyRegister_return">Back</string>
-    <string name="loading_step2">Updating tables...</string>
+    <string name="loading_step1">Please wait, Loading…</string>
+    <string name="loading_step2">Updating tables…</string>
     <string name="loading_step3">Checking Database</string>
+    <string name="lazyRegister_step1_description1">Let\'s start!</string>
+    <string name="lazyRegister_step1_description2">What\'s your name?</string>
+    <string name="lazyRegister_step2_description1">Right! Continuing…</string>
+    <string name="lazyRegister_step2_description2">What will your password be?</string>
+    <string name="lazyRegister_nameInput">Name</string>
+    <string name="lazyRegister_passwordInput">Password</string>
 </resources>

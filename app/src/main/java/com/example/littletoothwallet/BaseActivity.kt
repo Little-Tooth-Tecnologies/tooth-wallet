@@ -16,11 +16,11 @@ open class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Para Android 30 (API 30) ou superior
+            // For Android 30 (API 30) or higher
             window.setDecorFitsSystemWindows(false)
             window.insetsController?.hide(WindowInsets.Type.statusBars())
         } else {
-            // Para versões anteriores ao Android 30
+            // For versions prior to Android 30 (API 30)
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         }
 
