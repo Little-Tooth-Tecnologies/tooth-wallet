@@ -32,6 +32,8 @@
     <string name="lazyRegister_continue">Continuar</string>
     <string name="lazyRegister_nameInput">Nome</string>
     <string name="lazyRegister_passwordInput">Senha</string>
+    <string name="home_add_button">Adicionar</string>
+    <string name="home_add_plus">+</string>
 
 
     // Loading Constants
@@ -46,6 +48,14 @@
     </string-array>
 
     <string name="lazyRegister_return">Voltar</string>
+
+    // Home Constants
+
+    <string name="home_topText1">Olá {USUÁRIO}!</string>
+    <string name="home_topText2">Nenhuma pendência hoje.</string>
+    <string name="home_DefaultTopText">Parece que você não possui nenhum registro financeiro cadastrado…</string>
+    <string name="home_registroDespesasText1">Registro de Despesas</string>
+    <string name="home_registroDespesasbottomText1">Vazio por aqui…</string>
 
 
 </resources>
