@@ -1,7 +1,66 @@
 <resources>
-    <string name="app_name">Little Tooth Wallet</string>
-    <string name="walkthrough_begin_title">FINANÇAS PESSOAIS TÃO SIMPLES QUANTO UM SORRISO</string>
-    <string name="walkthrough_begin_description">Confiável, Projetado Para Tornar O Gerenciamento de Finanças Pessoais Tão Simples Quanto Um Sorriso.</string>
-    <string name="walkthrough_begin_button">Começar</string>
-    <string name="walkthrough_begin_login">Já tenho uma conta</string>
+    // APP Name
+    <string name="app_name" translatable="false">Tooth Wallet</string>
+    <string name="app_name_underlined" translatable="false"><u>Tooth Wallet</u></string>
+    <string name="app_logo">Logo Empresa Circle</string>
+    <string name="tooth_loading" translatable="false">tooth_loading</string>
+
+    // Walkthrough Constants
+    <string name="lazyRegister_begin_title">
+        FINANÇAS PESSOAIS TÃO SIMPLES QUANTO UM SORRISO
+    </string>
+
+    <string name="lazyRegister_begin_description">
+        Confiável, Projetado Para Tornar o Gerenciamento de Finanças Pessoais Tão Simples Quanto Um Sorriso.
+    </string>
+
+    <string name="lazyRegisterDone">Cadastro Realizado com sucesso!</string>
+    <string name="lazyRegisterRedirect">Estamos Redirecionando você para a tela principal</string>
+    <string name="lazyRegisterWelcome">Bem Vindo ao Tooth Wallet</string>
+
+    <string name="lazyRegister_step1_description1">Vamos Começar!</string>
+    <string name="lazyRegister_step1_description2">Qual é seu nome?</string>
+    <string name="lazyRegister_step2_description1">Certo! Continuando…</string>
+    <string name="lazyRegister_step2_description2">Qual será sua senha?</string>
+    
+    // Login Constants
+    <string name="login_loginScreen">Tela de Login</string>
+    <string name="login_inputEmail">Digite seu E-mail</string>
+    <string name="login_inputPassword">Digite sua Senha</string>
+
+    // Buttons Constants
+    <string name="login_button">Acessar</string>
+    <string name="lazyRegister_begin_button">Começar</string>
+    <string name="lazyRegister_begin_login">Já tenho uma Conta</string>
+    <string name="lazyRegister_begin_register">Criar uma Conta</string>
+    <string name="lazyRegister_continue">Continuar</string>
+    <string name="lazyRegister_nameInput">Nome</string>
+    <string name="lazyRegister_passwordInput">Senha</string>
+    <string name="login_emailInputButton" translatable="false">Login</string>
+    <string name="home_add_button">Adicionar</string>
+    <string name="home_add_plus" translatable="false">+</string>
+
+
+    // Loading Constants
+    <string name="loading_step1">Aguarde, Carregando…</string>
+    <string name="loading_step2">Atualizando Tabelas…</string>
+    <string name="loading_step3">Verificando Base de Dados…</string>
+
+    <string-array name="loading_steps">
+        <item>@string/loading_step1</item>
+        <item>@string/loading_step2</item>
+        <item>@string/loading_step3</item>
+    </string-array>
+
+    <string name="lazyRegister_return">Voltar</string>
+
+    // Home Constants
+
+    <string name="home_topText1">Olá {USUÁRIO}!</string>
+    <string name="home_topText2">Nenhuma pendência hoje.</string>
+    <string name="home_DefaultTopText">Parece que você não possui nenhum registro financeiro cadastrado…</string>
+    <string name="home_registroDespesasText1">Registro de Despesas</string>
+    <string name="home_registroDespesasbottomText1">Vazio por aqui…</string>
+
+
 </resources>

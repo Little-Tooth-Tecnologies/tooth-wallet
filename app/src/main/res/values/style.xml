@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="cellphoneDialog">
+        <item name="android:background">@drawable/bg_app_begin_box</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:layout_width">310dp</item>
+        <item name="android:layout_height">670dp</item>
+    </style>
+
+    <style name="inputName">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/input_box</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="inputEmail">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/input_box</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="buttonYellow">
+        <item name="android:background">@drawable/yellow_rounded</item>
+        <item name="android:elevation">7dp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">164dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">76dp</item>
+    </style>
+
+</resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
-        android:startColor = "@color/verde_menta"
-        android:centerColor="@color/verde_menta1.5"
-        android:endColor = "@color/verde_menta2"
+        android:startColor = "@color/mint_green_primary"
+        android:centerColor="@color/mint_green_secondary"
+        android:endColor = "@color/mint_green_dark"
         android:angle="-90"
         android:radius="30pt"
         />
     <corners android:radius="30dp" />
-    <stroke android:width="3dp" android:color="@color/semibranco" />
+    <stroke android:width="3dp" android:color="@color/semi_white" />
 </shape>
