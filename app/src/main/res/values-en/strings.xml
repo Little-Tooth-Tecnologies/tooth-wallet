@@ -13,6 +13,7 @@
     <string name="lazyRegister_continue">Continue</string>
     <string name="lazyRegister_return">Back</string>
     <string name="home_add_button">Add</string>
+    <string name="dialog_confirmation">Confirm Logout?</string>
     <string name="loading_step1">Please wait, Loading…</string>
     <string name="loading_step2">Updating tables…</string>
     <string name="loading_step3">Checking Database</string>
@@ -30,4 +31,7 @@
     <string name="login_loginScreen">Login Screen</string>
     <string name="login_inputEmail">Type your E-mail</string>
     <string name="login_inputPassword">Type your Password</string>
+    <string name="settings_topText">Settings</string>
+    <string name="dialog_confirmation_yes">Yes</string>
+    <string name="dialog_confirmation_cancel">Cancel</string>
 </resources>

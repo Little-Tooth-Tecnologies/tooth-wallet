@@ -39,6 +39,10 @@
     <string name="login_emailInputButton" translatable="false">Login</string>
     <string name="home_add_button">Adicionar</string>
     <string name="home_add_plus" translatable="false">+</string>
+    <string name="settings_logout_button" translatable="false">Logout</string>
+    <string name="dialog_confirmation">Confirmar Logout?</string>
+    <string name="dialog_confirmation_yes">Sim</string>
+    <string name="dialog_confirmation_cancel">Cancelar</string>
 
 
     // Loading Constants
@@ -61,6 +65,11 @@
     <string name="home_DefaultTopText">Parece que você não possui nenhum registro financeiro cadastrado…</string>
     <string name="home_registroDespesasText1">Registro de Despesas</string>
     <string name="home_registroDespesasbottomText1">Vazio por aqui…</string>
+
+    // Settings Constants
+
+    <string name="settings_topText">Configurações</string>
+
 
 
 </resources>
