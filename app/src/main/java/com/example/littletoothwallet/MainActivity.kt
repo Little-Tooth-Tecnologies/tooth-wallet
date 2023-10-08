@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.TextView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlin.random.Random
 
 class MainActivity : BaseActivity() {
@@ -19,10 +21,8 @@ class MainActivity : BaseActivity() {
     // remove as mensagens do handler quando a activity é destruida
     override fun onDestroy() {
         super.onDestroy()
-        handler.removeCallbacksAndMessages(null)
+        Handler().removeCallbacksAndMessages(null)
     }
-
-    private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,28 +33,34 @@ class MainActivity : BaseActivity() {
         val random = java.util.Random()
 
         // pega um valor randomico do array de strings e seta no textview
-        handler.postDelayed({
+        Handler().postDelayed({
             val randomIndex = random.nextInt(loadingSteps.size)
             loadingTextView.text = loadingSteps[randomIndex]
             updateRandomText(loadingTextView, random)
-        }, 2000)
+        }, 1500)
 
 
-        // chama a tela de welcome
+        //verifica se esta logado e envia para a activity certa
         Handler().postDelayed({
-            val intent = Intent(this, WelcomeActivity::class.java)
-            startActivity(intent)
-
-            finish()
-        }, 5000)
+            val user = Firebase.auth.currentUser
+            if (user != null) {
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                val intent = Intent(this, WelcomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }, 3000)
     }
 
     // atualiza o texto do textview com um valor randomico do array de strings
     private fun updateRandomText(loadingTextView: TextView?, random: java.util.Random) {
-        handler.postDelayed({
+        Handler().postDelayed({
             val randomIndex = random.nextInt(loadingSteps.size)
             loadingTextView?.text = loadingSteps[randomIndex]
             updateRandomText(loadingTextView, random)
-        }, 1500)
+        }, 750)
     }
 }

@@ -52,4 +52,9 @@ class WelcomeActivity : BaseActivity() {
         startActivity(intent)
     }
 
+    fun startLogin(view: View) {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
+
 }

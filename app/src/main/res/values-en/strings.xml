@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tooth Wallet</string>
     <string name="app_logo">Circle Company Logo</string>
-    <string name="tooth_loading">tooth_loading</string>
     <string name="lazyRegister_begin_title">PERSONAL FINANCE AS SIMPLE AS A SMILE</string>
     <string name="lazyRegister_begin_description">Reliable, Designed to Make\n         Personal Finance Management As Simple As A Smile.</string>
     <string name="lazyRegisterDone">Registration completed successfully!</string>
@@ -14,6 +12,7 @@
     <string name="lazyRegister_begin_register">Create Account</string>
     <string name="lazyRegister_continue">Continue</string>
     <string name="lazyRegister_return">Back</string>
+    <string name="home_add_button">Add</string>
     <string name="loading_step1">Please wait, Loading…</string>
     <string name="loading_step2">Updating tables…</string>
     <string name="loading_step3">Checking Database</string>
@@ -23,4 +22,12 @@
     <string name="lazyRegister_step2_description2">What will your password be?</string>
     <string name="lazyRegister_nameInput">Name</string>
     <string name="lazyRegister_passwordInput">Password</string>
+    <string name="home_topText1">Hello {USER}!</string>
+    <string name="home_topText2">No pending issues today.</string>
+    <string name="home_DefaultTopText">It appears that you do not have any financial records registered…</string>
+    <string name="home_registroDespesasText1">Expense Record</string>
+    <string name="home_registroDespesasbottomText1">Empty here...</string>
+    <string name="login_loginScreen">Login Screen</string>
+    <string name="login_inputEmail">Type your E-mail</string>
+    <string name="login_inputPassword">Type your Password</string>
 </resources>
