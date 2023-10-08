@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.app.NavUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -63,5 +64,7 @@ class LoginActivity : BaseActivity() {
     private fun updateUIhome() {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
+        finish()
     }
+
 }

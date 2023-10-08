@@ -35,4 +35,18 @@
         <item name="android:layout_marginBottom">76dp</item>
     </style>
 
+    <style name="buttonRed_logout">
+        <item name="android:background">@drawable/red_rounded</item>
+        <item name="android:elevation">7dp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">106dp</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">76dp</item>
+    </style>
+
 </resources>
