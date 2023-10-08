@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.littletoothwallet
 
 import android.content.Intent

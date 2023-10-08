@@ -17,8 +17,8 @@ open class BaseActivity : AppCompatActivity() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             // For Android 30 (API 30) or higher
-            window.setDecorFitsSystemWindows(false)
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
+            window.setDecorFitsSystemWindows(true)
+            // window.insetsController?.hide(WindowInsets.Type.statusBars())
         } else {
             // For versions prior to Android 30 (API 30)
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN

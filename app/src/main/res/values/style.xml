@@ -8,7 +8,7 @@
     </style>
 
     <style name="inputName">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/input_box</item>
         <item name="android:padding">15dp</item>

@@ -10,24 +10,49 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="257dp"
-        android:layout_height="286dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="184dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/begin_box_phone" />
 
     <TextView
+        android:id="@+id/TextView"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/lazyRegister_step1_description1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <EditText
+        android:id="@+id/inputName"
+        style="@style/inputName"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/lazyRegister_nameInput"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView2" />
+
+    <TextView
         android:id="@+id/TextView2"
         android:layout_width="234dp"
         android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="@string/lazyRegister_step1_description2"
         android:textColor="@color/yellow"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextView" />
 
@@ -49,30 +74,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputName"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.995" />
 
-    <TextView
-        android:id="@+id/TextView"
-        android:layout_width="230dp"
-        android:layout_height="70dp"
-        android:text="@string/lazyRegister_step1_description1"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <EditText
-        android:id="@+id/inputName"
-        style="@style/inputName"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="50dp"
-        android:ems="10"
-        android:hint="@string/lazyRegister_nameInput"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

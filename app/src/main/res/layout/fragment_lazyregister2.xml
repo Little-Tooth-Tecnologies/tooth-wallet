@@ -15,9 +15,9 @@
         android:layout_marginTop="20dp"
         android:text="@string/lazyRegister_step2_description2"
         android:textColor="@color/yellow"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.381"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextView" />
 
@@ -28,9 +28,9 @@
         android:layout_marginTop="16dp"
         android:text="@string/lazyRegister_step2_description1"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -38,7 +38,8 @@
         android:id="@+id/btnContinue2"
         android:layout_width="164dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/yellow_rounded"
         android:elevation="7dp"
         android:fontFamily="@font/roboto"
@@ -50,14 +51,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        app:layout_constraintVertical_bias="0.6" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="257dp"
-        android:layout_height="286dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/security_pass" />
@@ -85,15 +89,14 @@
     <EditText
         android:id="@+id/inputPassword"
         style="@style/inputName"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints="*******"
         android:ems="10"
         android:hint="@string/lazyRegister_passwordInput"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextView2"
-        android:autofillHints="*******" />
+        app:layout_constraintTop_toBottomOf="@+id/TextView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
