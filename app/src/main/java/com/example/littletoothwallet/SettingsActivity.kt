@@ -11,9 +11,7 @@ class SettingsActivity : BaseActivity() {
         setContentView(R.layout.activity_settings)
     }
 
-    fun startHomeActivity(view: View) {
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
+    fun cancelActivity(view: View) {
         finish()
     }
 

@@ -129,6 +129,7 @@
                 style="@style/buttonYellow"
                 android:layout_marginTop="40dp"
                 android:text="@string/home_add_button"
+                android:onClick="startAddPaymentMethod"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.87"
@@ -156,7 +157,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--            resto aqui :)-->
 
             <Button
                 android:id="@+id/button2"
@@ -164,6 +164,7 @@
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:text="@string/home_add_plus"
+                android:onClick="startAddExpense"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"

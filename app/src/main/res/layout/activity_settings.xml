@@ -41,7 +41,7 @@
                 android:id="@+id/imageView7"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:onClick="startHomeActivity"
+                android:onClick="cancelActivity"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.086"
@@ -52,7 +52,7 @@
             <FrameLayout
                 android:layout_width="53dp"
                 android:layout_height="54dp"
-                android:onClick="startHomeActivity"
+                android:onClick="cancelActivity"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.924"

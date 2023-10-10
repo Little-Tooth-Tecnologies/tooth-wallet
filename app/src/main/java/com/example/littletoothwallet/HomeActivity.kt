@@ -15,4 +15,14 @@ class HomeActivity : BaseActivity() {
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
+
+    fun startAddPaymentMethod(view: View) {
+        val intent = Intent(this, AddPaymentEntryActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun startAddExpense(view: View) {
+        val intent = Intent(this, AddExpenseEntryActivity::class.java)
+        startActivity(intent)
+    }
 }
