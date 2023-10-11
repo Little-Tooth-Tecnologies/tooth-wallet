@@ -8,9 +8,7 @@ import android.widget.EditText
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import androidx.core.app.NavUtils
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -31,7 +29,7 @@ class LoginActivity : BaseActivity() {
         }
     }
 
-    fun Login(view: View) {
+    fun login(view: View) {
         val emailEditText = findViewById<EditText>(R.id.InputEmail)
         val senhaEditText = findViewById<EditText>(R.id.InputPassword)
 
@@ -55,7 +53,8 @@ class LoginActivity : BaseActivity() {
                         "Autenticação Falhou, Tente Novamente.",
                         Toast.LENGTH_LONG,
                     ).show()
-                    // TODO: deixar edittexts em branco
+                    emailEditText.setText("")
+                    senhaEditText.setText("")
                 }
             }
 

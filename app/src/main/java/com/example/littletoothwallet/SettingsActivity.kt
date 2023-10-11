@@ -1,8 +1,11 @@
 package com.example.littletoothwallet
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.google.firebase.auth.FirebaseAuth
 
 class SettingsActivity : BaseActivity() {
 
@@ -16,7 +19,20 @@ class SettingsActivity : BaseActivity() {
     }
 
     fun logoutConfirmation(view: View) {
-        val dialogFragment = ConfirmationDialogFragment()
-        dialogFragment.show(supportFragmentManager, "ConfirmationDialogFragment")
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(R.string.dialog_confirmation)
+            .setPositiveButton(R.string.dialog_confirmation_yes
+            ) { _, _ ->
+                FirebaseAuth.getInstance().signOut()
+
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finishAffinity()
+            }
+            .setNegativeButton(R.string.dialog_confirmation_cancel
+            ) { _, _ ->
+                // nada
+            }
+        builder.create().show()
     }
 }
