@@ -1,4 +1,4 @@
-package com.example.littletoothwallet
+package com.example.littletoothwallet.controller
 
 import android.os.Build
 import android.os.Bundle

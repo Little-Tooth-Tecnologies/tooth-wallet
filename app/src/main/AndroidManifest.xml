@@ -13,7 +13,7 @@
         android:theme="@style/Base.Theme.LittleToothWallet"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,32 +22,32 @@
         </activity>
 
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".controller.WelcomeActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name=".RegisterActivity">
+            android:name=".controller.RegisterActivity">
         </activity>
 
         <activity
-            android:name=".LoginActivity">
+            android:name=".controller.LoginActivity">
         </activity>
 
         <activity
-            android:name=".HomeActivity">
+            android:name=".controller.HomeActivity">
         </activity>
 
         <activity
-            android:name=".SettingsActivity">
+            android:name=".controller.SettingsActivity">
         </activity>
 
         <activity
-            android:name=".AddExpenseEntryActivity">
+            android:name=".controller.AddExpenseEntryActivity">
         </activity>
 
         <activity
-            android:name=".AddPaymentEntryActivity">
+            android:name=".controller.AddPaymentEntryActivity">
         </activity>
 
         <meta-data

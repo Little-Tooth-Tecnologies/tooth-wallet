@@ -1,8 +1,8 @@
-package com.example.littletoothwallet
+package com.example.littletoothwallet.controller
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.example.littletoothwallet.R
 
 class AddPaymentEntryActivity : BaseActivity() {
 

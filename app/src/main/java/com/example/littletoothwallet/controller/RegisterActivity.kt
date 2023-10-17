@@ -1,9 +1,8 @@
-package com.example.littletoothwallet
+package com.example.littletoothwallet.controller
 
-import RegisterPagerAdapter
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.example.littletoothwallet.R
 
 class RegisterActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?){

@@ -1,9 +1,9 @@
-package com.example.littletoothwallet
+package com.example.littletoothwallet.controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.littletoothwallet.R
 
 class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

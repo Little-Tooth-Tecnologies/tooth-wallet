@@ -1,19 +1,16 @@
-package com.example.littletoothwallet
+package com.example.littletoothwallet.controller
 
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.view.View
-import android.view.WindowInsets
-import android.view.WindowInsetsController
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import com.example.littletoothwallet.R
 
 class WelcomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

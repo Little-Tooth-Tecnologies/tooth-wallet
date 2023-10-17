@@ -1,4 +1,4 @@
-package com.example.littletoothwallet
+package com.example.littletoothwallet.controller
 
 import android.content.Intent
 import android.content.ContentValues.TAG
@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.example.littletoothwallet.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
