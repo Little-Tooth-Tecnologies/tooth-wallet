@@ -39,7 +39,7 @@
     <string name="login_emailInputButton" translatable="false">Login</string>
     <string name="home_add_button">Adicionar</string>
     <string name="home_add_plus" translatable="false">+</string>
-    <string name="settings_logout_button" translatable="false">Logout</string>
+    <string name="settings_logout_button" translatable="false">Sair</string>
     <string name="dialog_confirmation">Confirmar Logout?</string>
     <string name="dialog_confirmation_yes">Sim</string>
     <string name="dialog_confirmation_cancel">Cancelar</string>
@@ -69,6 +69,8 @@
     // Settings Constants
 
     <string name="settings_topText">Configurações</string>
+    <string name="darkMode">Modo Escuro</string>
+    <string name="notifications">Notificações</string>
 
     // Adding Payment/Expenses Constants
 

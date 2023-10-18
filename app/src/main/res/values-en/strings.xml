@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Tooth Wallet</string>
+    <string name="app_name_underlined"><u>Tooth Wallet</u></string>
     <string name="app_logo">Circle Company Logo</string>
+    <string name="tooth_loading">tooth_loading</string>
     <string name="lazyRegister_begin_title">PERSONAL FINANCE AS SIMPLE AS A SMILE</string>
     <string name="lazyRegister_begin_description">Reliable, Designed to Make\n         Personal Finance Management As Simple As A Smile.</string>
     <string name="lazyRegisterDone">Registration completed successfully!</string>
@@ -13,6 +16,7 @@
     <string name="lazyRegister_continue">Continue</string>
     <string name="lazyRegister_return">Back</string>
     <string name="home_add_button">Add</string>
+    <string name="settings_logout_button">Logout</string>
     <string name="dialog_confirmation">Confirm Logout?</string>
     <string name="loading_step1">Please wait, Loading…</string>
     <string name="loading_step2">Updating tables…</string>
@@ -34,6 +38,8 @@
     <string name="settings_topText">Settings</string>
     <string name="dialog_confirmation_yes">Yes</string>
     <string name="dialog_confirmation_cancel">Cancel</string>
+    <string name="darkMode">Dark Mode</string>
+    <string name="notifications">Notifications</string>
     <string name="paymentEntry_topText">"Add Payment Method "</string>
     <string name="paymentEntry_topText_underlined"><u>Add Payment Method</u></string>
     <string name="paymentEntry_entryName">Name</string>
