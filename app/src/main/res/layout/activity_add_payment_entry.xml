@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="28dp"
 
                 android:text="@string/paymentEntry_colorValue"
                 android:textStyle="bold"
@@ -171,31 +171,17 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/paymentEntry_entryDesc"
-                android:textStyle="bold"
-
-                app:layout_constraintBottom_toTopOf="@+id/inputPaymentEntryDesc"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.22"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPaymentEntryName"
-                app:layout_constraintVertical_bias="0.68" />
-
-            <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/paymentEntry_entryValue"
 
+                android:text="@string/paymentEntry_entryValue"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.173"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPaymentEntryDesc" />
+                app:layout_constraintTop_toBottomOf="@+id/inputPaymentEntryName" />
 
             <Button
                 android:id="@+id/button"
@@ -236,24 +222,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <EditText
-                android:id="@+id/inputPaymentEntryDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.395"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPaymentEntryName" />
-
-            <EditText
                 android:id="@+id/inputValueEntry"
                 android:layout_width="127dp"
                 android:layout_height="41dp"
                 android:ems="10"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.212"
                 app:layout_constraintStart_toStartOf="parent"

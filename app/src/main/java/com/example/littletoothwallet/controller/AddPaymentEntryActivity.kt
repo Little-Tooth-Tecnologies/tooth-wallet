@@ -4,20 +4,21 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.graphics.ColorUtils
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.littletoothwallet.R
+import com.example.littletoothwallet.model.connection.ConnectionBD
+import com.example.littletoothwallet.model.dao.BankAccountDAO
+import com.example.littletoothwallet.model.dto.BankAccount
 
 
 class AddPaymentEntryActivity : BaseActivity() {
 
     private lateinit var colorPickerDialog: AlertDialog
-    private lateinit var content: ConstraintLayout
     private lateinit var colorPickerButton: View
-
+    private lateinit var entryFlag: String
     private val colors = listOf(
         Color.CYAN, Color.rgb(179, 157, 219), Color.MAGENTA, Color.rgb(245, 245, 220), Color.YELLOW,
         Color.rgb(169, 169, 169), Color.GREEN, Color.rgb(244, 164, 96), Color.BLUE, Color.RED,
@@ -40,7 +41,7 @@ class AddPaymentEntryActivity : BaseActivity() {
 
     private fun createColorPickerRecyclerView(): RecyclerView {
         val numColumns = 5 // Desired number of columns
-        val padding = dpToPx(15) // Convert 15 dp to pixels
+        val padding = dpToPx(15)
         val spacing = dpToPx(15) // Set the spacing between items in dp
 
         return RecyclerView(this).apply {
@@ -70,13 +71,31 @@ class AddPaymentEntryActivity : BaseActivity() {
 
     private fun applySelectedColor(selectedColor: Int) {
         // Change Button Background Color
-        colorPickerButton.setBackgroundColor(ColorUtils.blendARGB(selectedColor, Color.BLACK, 0.3f)) // Make it darker
+        colorPickerButton.setBackgroundColor(selectedColor)
+        entryFlag = selectedColor.toString()
+        println(selectedColor)
+        println(entryFlag)
     }
 
     private fun dpToPx(dp: Int): Int {
         return (dp * resources.displayMetrics.density).toInt()
     }
 
-    
+    fun addNewPaymentMethod(view: View) {
+        val database = ConnectionBD(this).writableDatabase
+
+        val entryName = findViewById<EditText>(R.id.inputPaymentEntryName).text.toString()
+        val entryValueText = findViewById<EditText>(R.id.inputValueEntry).text.toString()
+        val entryValue = entryValueText.toDoubleOrNull() ?: 0.0
+
+        val bankAccount = BankAccount(-1, entryName, entryValue, entryFlag)
+
+        val bankAccountDAO = BankAccountDAO(database, this)
+        bankAccountDAO.insertBankAccount(bankAccount)
+    }
+
+    fun cancelActivity(view: View) {
+        finish()
+    }
 
 }

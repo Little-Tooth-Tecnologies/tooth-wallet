@@ -50,4 +50,6 @@
     <string name="expenseEntry_entryTitle">Expense Title</string>
     <string name="expenseEntry_entryMethod">Payment Method</string>
     <string name="expenseEntry_topText_underlined"><u>Add Expense</u></string>
+    <string name="toast_Success">Successfully added!</string>
+    <string name="toast_Failure">Failed to add!</string>
 </resources>

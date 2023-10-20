@@ -1,10 +1,14 @@
 package com.example.littletoothwallet.model.dao
 
 import android.content.ContentValues
+import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import android.widget.Toast
+import com.example.littletoothwallet.R
 import com.example.littletoothwallet.model.dto.BankAccount
 
-class BankAccountDAO(private val    database: SQLiteDatabase) {
+
+class BankAccountDAO(private val database: SQLiteDatabase, private val context: Context) {
 
     fun insertBankAccount(account: BankAccount) {
         val values = ContentValues().apply {
@@ -13,7 +17,12 @@ class BankAccountDAO(private val    database: SQLiteDatabase) {
             put("ac_flag", account.flag)
         }
 
-        database.insert("bank_accounts", null, values)
+        val result = database.insert("bank_accounts", null, values)
+        if (result != -1L) {
+            Toast.makeText(context, context.getString(R.string.toast_Success), Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(context, context.getString(R.string.toast_Failure), Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun updateBankAccount(account: BankAccount) {
