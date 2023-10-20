@@ -3,4 +3,15 @@
     <style name="Base.Theme.LittleToothWallet" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/mint_green_primary</item>
     </style>
+
+    <!-- AlertDialog Theme -->
+    <style name="CustomAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/mint_green_primary</item>
+        <item name="colorPrimaryDark">@color/mint_green_primary</item>
+        <item name="colorAccent">@color/mint_green_primary</item>
+        <item name="android:background">@color/mint_green_primary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="buttonBarNegativeButtonStyle">@android:color/white</item>
+    </style>
 </resources>

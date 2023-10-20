@@ -79,6 +79,7 @@
     <string name="paymentEntry_entryName">Nome</string>
     <string name="paymentEntry_entryDesc">Descrição (Opcional)</string>
     <string name="paymentEntry_entryValue">Valor da Conta</string>
+    <string name="paymentEntry_colorValue">Cor da Conta</string>
     <string name="expenseEntry_topText">Adicionar Despesa</string>
     <string name="expenseEntry_topText_underlined"><u>Adicionar Despesa</u></string>
     <string name="expenseEntry_entryTitle">Titulo da Despesa</string>

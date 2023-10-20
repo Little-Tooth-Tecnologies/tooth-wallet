@@ -45,6 +45,7 @@
     <string name="paymentEntry_entryName">Name</string>
     <string name="paymentEntry_entryDesc">Description (Optional)</string>
     <string name="paymentEntry_entryValue">Account Value</string>
+    <string name="paymentEntry_colorValue">Account Color</string>
     <string name="expenseEntry_topText">Add Expense</string>
     <string name="expenseEntry_entryTitle">Expense Title</string>
     <string name="expenseEntry_entryMethod">Payment Method</string>
