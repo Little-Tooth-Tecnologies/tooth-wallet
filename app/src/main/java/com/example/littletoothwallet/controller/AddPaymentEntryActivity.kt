@@ -1,5 +1,6 @@
 package com.example.littletoothwallet.controller
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -50,7 +51,7 @@ class AddPaymentEntryActivity : BaseActivity() {
                 ViewGroup.LayoutParams.MATCH_PARENT
             )
             layoutManager = GridLayoutManager(this@AddPaymentEntryActivity, numColumns)
-            setPadding(padding, dpToPx(20), padding, padding) // Convert padding to pixels
+            setPadding(padding, dpToPx(20), padding, padding)
             adapter = ColorAdapter(this@AddPaymentEntryActivity, colors) { selectedColor ->
                 applySelectedColor(selectedColor)
                 colorPickerDialog.dismiss()
@@ -90,8 +91,12 @@ class AddPaymentEntryActivity : BaseActivity() {
 
         val bankAccount = BankAccount(-1, entryName, entryValue, entryFlag)
 
-        val bankAccountDAO = BankAccountDAO(database, this)
+        val bankAccountDAO = BankAccountDAO(this@AddPaymentEntryActivity)
         bankAccountDAO.insertBankAccount(bankAccount)
+
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finishAffinity()
     }
 
     fun cancelActivity(view: View) {

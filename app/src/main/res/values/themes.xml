@@ -6,12 +6,12 @@
 
     <!-- AlertDialog Theme -->
     <style name="CustomAlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
-        <item name="colorPrimary">@color/mint_green_primary</item>
-        <item name="colorPrimaryDark">@color/mint_green_primary</item>
+        <item name="colorPrimary">@color/semi_white</item>
+        <item name="colorPrimaryDark">@color/semi_white</item>
         <item name="colorAccent">@color/mint_green_primary</item>
-        <item name="android:background">@color/mint_green_primary</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
         <item name="buttonBarNegativeButtonStyle">@android:color/white</item>
     </style>
 </resources>

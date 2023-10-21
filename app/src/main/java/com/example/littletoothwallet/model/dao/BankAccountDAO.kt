@@ -5,10 +5,14 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.widget.Toast
 import com.example.littletoothwallet.R
+import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.example.littletoothwallet.model.dto.BankAccount
 
 
-class BankAccountDAO(private val database: SQLiteDatabase, private val context: Context) {
+class BankAccountDAO(private val context: Context) {
+
+    private val connectionBD : ConnectionBD = ConnectionBD(context)
+    private val database : SQLiteDatabase = connectionBD.writableDatabase
 
     fun insertBankAccount(account: BankAccount) {
         val values = ContentValues().apply {
