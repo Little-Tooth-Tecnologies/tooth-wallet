@@ -23,7 +23,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView"
                 android:layout_width="172dp"
                 android:layout_height="23dp"
                 android:text="@string/home_topText1"
@@ -36,7 +36,7 @@
                 app:layout_constraintVertical_bias="0.313" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView2"
                 android:layout_width="172dp"
                 android:layout_height="23dp"
                 android:text="@string/home_topText2"
@@ -106,29 +106,27 @@
                 android:id="@+id/titleExpenseEntryName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/expenseEntry_entryTitle"
+                android:layout_marginTop="16dp"
 
+                android:text="@string/expenseEntry_entryTitle"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/inputExpenseEntryName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.197"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:text="@string/paymentEntry_entryValue"
-                android:textStyle="bold"
 
-                app:layout_constraintBottom_toTopOf="@+id/inputExpenseValueEntry"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.180"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputExpenseEntryName"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/titleExpenseEntryName"
+                app:layout_constraintTop_toBottomOf="@+id/inputExpenseEntryName" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -138,25 +136,22 @@
 
                 android:text="@string/expenseEntry_entryMethod"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/_dynamic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.235"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputExpenseValueEntry"
-                app:layout_constraintVertical_bias="0.111" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/inputExpenseValueEntry" />
 
             <Spinner
                 android:id="@+id/_dynamic"
                 android:layout_width="131dp"
                 android:layout_height="31dp"
-                android:layout_marginTop="40dp"
                 android:background="#EFEFEF"
                 android:elevation="4dp"
                 android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.235"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputExpenseValueEntry" />
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <Button
                 android:id="@+id/button"
@@ -172,8 +167,8 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="267dp"
-                android:layout_height="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:elevation="0.45dp"
                 android:gravity="center"
                 android:lineSpacingExtra="8sp"
@@ -189,14 +184,13 @@
                 android:id="@+id/inputExpenseEntryName"
                 android:layout_width="180dp"
                 android:layout_height="42dp"
-                android:layout_marginTop="36dp"
                 android:elevation="0.45dp"
                 android:ems="10"
                 android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.305"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/titleExpenseEntryName" />
 
 
             <EditText
@@ -209,7 +203,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.224"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="145dp" />
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
             <Button
                 android:id="@+id/button3"

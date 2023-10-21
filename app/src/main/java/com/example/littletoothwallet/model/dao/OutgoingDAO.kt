@@ -1,10 +1,15 @@
 package com.example.littletoothwallet.model.dao
 
 import android.content.ContentValues
+import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.example.littletoothwallet.model.dto.Outgoing
 
-class OutgoingDAO(private val database: SQLiteDatabase) {
+class OutgoingDAO(private val context: Context) {
+
+    private val connectionBD : ConnectionBD = ConnectionBD(context)
+    private val database : SQLiteDatabase = connectionBD.writableDatabase
 
     fun insertOutgoing(outgoing: Outgoing) {
         val values = ContentValues().apply {
@@ -37,7 +42,7 @@ class OutgoingDAO(private val database: SQLiteDatabase) {
         database.delete("outgoing", selection, selectionArgs)
     }
 
-    fun getAllOutgoings(): List<Outgoing> {
+    fun getAllOutgoings(): MutableList<Outgoing> {
         val outgoings = mutableListOf<Outgoing>()
         val cursor = database.rawQuery("SELECT * FROM outgoing", null)
 

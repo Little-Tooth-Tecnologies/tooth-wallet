@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tooth Wallet</string>
-    <string name="app_name_underlined"><u>Tooth Wallet</u></string>
     <string name="app_logo">Circle Company Logo</string>
-    <string name="tooth_loading">tooth_loading</string>
     <string name="lazyRegister_begin_title">PERSONAL FINANCE AS SIMPLE AS A SMILE</string>
     <string name="lazyRegister_begin_description">Reliable, Designed to Make\n         Personal Finance Management As Simple As A Smile.</string>
     <string name="lazyRegisterDone">Registration completed successfully!</string>
@@ -42,6 +39,7 @@
     <string name="notifications">Notifications</string>
     <string name="paymentEntry_topText">"Add Payment Method "</string>
     <string name="paymentEntry_topText_underlined"><u>Add Payment Method</u></string>
+    <string name="paymentEntry_topText_underlined_edit"><u>Edit Payment Method</u></string>
     <string name="paymentEntry_entryName">Name</string>
     <string name="paymentEntry_entryDesc">Description (Optional)</string>
     <string name="paymentEntry_entryValue">Account Value</string>
@@ -52,4 +50,13 @@
     <string name="expenseEntry_topText_underlined"><u>Add Expense</u></string>
     <string name="toast_Success">Successfully added!</string>
     <string name="toast_Failure">Failed to add!</string>
+    <string name="home_accountTopText"><u>Accounts</u></string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_delete">Delete</string>
+    <string name="confirm_delete">Do you want to delete this Payment method?</string>
+    <string name="confirm_delete_yes">Delete</string>
+    <string name="confirm_delete_no">Cancel</string>
+    <string name="toast_SuccessDelete">Successfully Deleted!</string>
+    <string name="toast_FailureDelete">Failure to Delete!</string>
+    <string name="home_registroDespesasText1_underlined"><u>Expense Record</u></string>
 </resources>

@@ -45,10 +45,15 @@ class BankAccountDAO(private val context: Context) {
     fun deleteBankAccount(account: BankAccount) {
         val selection = "id = ?"
         val selectionArgs = arrayOf(account.id.toString())
-        database.delete("bank_accounts", selection, selectionArgs)
+        val result = database.delete("bank_accounts", selection, selectionArgs)
+        if (result > 0) {
+            Toast.makeText(context, context.getString(R.string.toast_SuccessDelete), Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(context, context.getString(R.string.toast_FailureDelete), Toast.LENGTH_SHORT).show()
+        }
     }
 
-    fun getAllBankAccounts(): List<BankAccount> {
+    fun getAllBankAccounts(): MutableList<BankAccount> {
         val accounts = mutableListOf<BankAccount>()
         val cursor = database.rawQuery("SELECT * FROM bank_accounts", null)
 

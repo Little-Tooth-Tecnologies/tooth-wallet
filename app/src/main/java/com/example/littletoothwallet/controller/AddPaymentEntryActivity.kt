@@ -10,7 +10,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.littletoothwallet.R
-import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.example.littletoothwallet.model.dao.BankAccountDAO
 import com.example.littletoothwallet.model.dto.BankAccount
 
@@ -31,6 +30,8 @@ class AddPaymentEntryActivity : BaseActivity() {
         setContentView(R.layout.activity_add_payment_entry)
 
         colorPickerButton = findViewById(R.id.colorPickerButton)
+        colorPickerButton.setBackgroundColor(-16776961)
+        entryFlag = (-16776961).toString()
         colorPickerButton.setOnClickListener { showColorPickerDialog() }
     }
 
@@ -74,8 +75,6 @@ class AddPaymentEntryActivity : BaseActivity() {
         // Change Button Background Color
         colorPickerButton.setBackgroundColor(selectedColor)
         entryFlag = selectedColor.toString()
-        println(selectedColor)
-        println(entryFlag)
     }
 
     private fun dpToPx(dp: Int): Int {
@@ -83,14 +82,11 @@ class AddPaymentEntryActivity : BaseActivity() {
     }
 
     fun addNewPaymentMethod(view: View) {
-        val database = ConnectionBD(this).writableDatabase
-
         val entryName = findViewById<EditText>(R.id.inputPaymentEntryName).text.toString()
         val entryValueText = findViewById<EditText>(R.id.inputValueEntry).text.toString()
         val entryValue = entryValueText.toDoubleOrNull() ?: 0.0
 
         val bankAccount = BankAccount(-1, entryName, entryValue, entryFlag)
-
         val bankAccountDAO = BankAccountDAO(this@AddPaymentEntryActivity)
         bankAccountDAO.insertBankAccount(bankAccount)
 

@@ -29,6 +29,7 @@
                 android:layout_height="23dp"
                 android:text="@string/home_topText1"
                 android:textStyle="bold"
+                android:textColor="@color/grey"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
@@ -41,6 +42,7 @@
                 android:layout_width="172dp"
                 android:layout_height="23dp"
                 android:text="@string/home_topText2"
+                android:textColor="@color/grey"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
@@ -97,15 +99,46 @@
         app:layout_constraintVertical_bias="0.02">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="298dp"
-            android:layout_height="168dp"
+            android:layout_width="317dp"
+            android:layout_height="186dp"
             android:layout_gravity="center">
 
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_accountTopText"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.035" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/RecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="309dp"
+                android:layout_height="155dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                app:layout_constraintVertical_bias="0.812" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/buttonYellow"
+                android:layout_width="39dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="4dp"
+                android:onClick="startAddPaymentMethod"
+                android:text="@string/home_add_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -127,72 +160,43 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <Button
-                android:id="@+id/button2"
-                style="@style/buttonYellow"
-                android:layout_width="64dp"
-                android:layout_height="48dp"
-                android:onClick="startAddPaymentMethod"
-                android:text="@string/home_add_plus"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerViewExpense"
+                android:layout_width="307dp"
+                android:layout_height="332dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.82"
+                app:layout_constraintHorizontal_bias="0.428"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9"
-                app:layout_constraintVertical_bias="0.178" />
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.812" />
 
             <Button
                 android:id="@+id/button4"
                 style="@style/buttonYellow"
-                android:layout_width="64dp"
-                android:layout_height="48dp"
+                android:layout_width="39dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
                 android:onClick="startAddExpense"
                 android:text="@string/home_add_plus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9"
-                app:layout_constraintVertical_bias="0.196" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="172dp"
-                android:layout_height="23dp"
-                android:text="@string/home_registroDespesasbottomText1"
-                android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView11"
-                app:layout_constraintVertical_bias="0.164" />
+                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="172dp"
-                android:layout_height="23dp"
-                android:text="@string/home_registroDespesasText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_registroDespesasText1_underlined"
                 android:textAlignment="center"
+                android:textColor="@color/grey"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.046" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8"
-                app:layout_constraintVertical_bias="0.081"
-                app:srcCompat="@drawable/no_items_main" />
+                app:layout_constraintVertical_bias="0.02" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

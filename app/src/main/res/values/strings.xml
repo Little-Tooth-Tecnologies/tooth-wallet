@@ -39,7 +39,7 @@
     <string name="login_emailInputButton" translatable="false">Login</string>
     <string name="home_add_button">Adicionar</string>
     <string name="home_add_plus" translatable="false">+</string>
-    <string name="settings_logout_button" translatable="false">Sair</string>
+    <string name="settings_logout_button">Sair</string>
     <string name="dialog_confirmation">Confirmar Logout?</string>
     <string name="dialog_confirmation_yes">Sim</string>
     <string name="dialog_confirmation_cancel">Cancelar</string>
@@ -62,8 +62,10 @@
 
     <string name="home_topText1">Olá {USUÁRIO}!</string>
     <string name="home_topText2">Nenhuma pendência hoje.</string>
+    <string name="home_accountTopText"><u>Contas</u></string>
     <string name="home_DefaultTopText">Parece que você não possui nenhum registro financeiro cadastrado…</string>
     <string name="home_registroDespesasText1">Registro de Despesas</string>
+    <string name="home_registroDespesasText1_underlined"><u>Registro de Despesas</u></string>
     <string name="home_registroDespesasbottomText1">Vazio por aqui…</string>
 
     // Settings Constants
@@ -76,6 +78,7 @@
 
     <string name="paymentEntry_topText">Adicionar Forma de Pagamento</string>
     <string name="paymentEntry_topText_underlined"><u>Adicionar Forma de Pagamento</u></string>
+    <string name="paymentEntry_topText_underlined_edit"><u>Editar Forma de Pagamento</u></string>
     <string name="paymentEntry_entryName">Nome</string>
     <string name="paymentEntry_entryDesc">Descrição (Opcional)</string>
     <string name="paymentEntry_entryValue">Valor da Conta</string>
@@ -88,6 +91,15 @@
     <string name="toast_Failure">Falha ao Adicionar!</string>
 
 
+    // BankAccounts Menu Constansts
+    <string name="menu_edit">Editar</string>
+    <string name="menu_delete">Excluir</string>
 
+    // BankAccounts Dialog Constants
+    <string name="confirm_delete">Deseja excluir essa forma de Pagamento?</string>
+    <string name="confirm_delete_yes">Excluir</string>
+    <string name="confirm_delete_no">Cancelar</string>
+    <string name="toast_SuccessDelete">Excluido com sucesso!</string>
+    <string name="toast_FailureDelete">Falha ao Deletar!</string>
 
 </resources>

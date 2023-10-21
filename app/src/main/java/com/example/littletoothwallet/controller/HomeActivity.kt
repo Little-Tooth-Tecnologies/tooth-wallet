@@ -8,46 +8,60 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.littletoothwallet.R
 import com.example.littletoothwallet.adapter.BankAccountsAdapter
+import com.example.littletoothwallet.adapter.ExpensesAdapter
 import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.example.littletoothwallet.model.dao.BankAccountDAO
+import com.example.littletoothwallet.model.dao.OutgoingDAO
 import com.example.littletoothwallet.model.dto.BankAccount
+import com.example.littletoothwallet.model.dto.Outgoing
 
 class HomeActivity : BaseActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var bankAccounts: List<BankAccount>
+    private lateinit var recyclerViewBA: RecyclerView
+    private lateinit var recyclerViewEX: RecyclerView
+    private lateinit var bankAccounts: MutableList<BankAccount>
+    private lateinit var expenses: MutableList<Outgoing>
     private lateinit var bankAccountsAdapter: BankAccountsAdapter
+    private lateinit var expensesAdapter: ExpensesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        recyclerView = findViewById(R.id.RecyclerView)
+        recyclerViewBA = findViewById(R.id.RecyclerView)
+        recyclerViewEX = findViewById(R.id.RecyclerViewExpense)
+
         val connectionBD : ConnectionBD = ConnectionBD(this@HomeActivity)
         val database : SQLiteDatabase = connectionBD.writableDatabase
 
         val bankAccountsDAO = BankAccountDAO(this@HomeActivity)
-
         bankAccounts = bankAccountsDAO.getAllBankAccounts()
+        val outgoingsDAO = OutgoingDAO(this@HomeActivity)
+        expenses = outgoingsDAO.getAllOutgoings()
+
         bankAccountsAdapter = BankAccountsAdapter(this@HomeActivity, bankAccounts)
-        recyclerView.adapter = bankAccountsAdapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerViewBA.adapter = bankAccountsAdapter
+        recyclerViewBA.layoutManager = LinearLayoutManager(this@HomeActivity)
+
+        expensesAdapter = ExpensesAdapter(this@HomeActivity, expenses)
+        recyclerViewEX.adapter = expensesAdapter
+        recyclerViewEX.layoutManager = LinearLayoutManager(this@HomeActivity)
 
 
     }
 
     fun startSettingsActivity(view: View) {
-        val intent = Intent(this, SettingsActivity::class.java)
+        val intent = Intent(this@HomeActivity, SettingsActivity::class.java)
         startActivity(intent)
     }
 
     fun startAddPaymentMethod(view: View) {
-        val intent = Intent(this, AddPaymentEntryActivity::class.java)
+        val intent = Intent(this@HomeActivity, AddPaymentEntryActivity::class.java)
         startActivity(intent)
     }
 
     fun startAddExpense(view: View) {
-        val intent = Intent(this, AddExpenseEntryActivity::class.java)
+        val intent = Intent(this@HomeActivity, AddExpenseEntryActivity::class.java)
         startActivity(intent)
     }
 }
