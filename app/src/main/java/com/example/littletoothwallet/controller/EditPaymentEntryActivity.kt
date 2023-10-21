@@ -98,7 +98,6 @@ class EditPaymentEntryActivity : BaseActivity() {
         val bankAccount = BankAccount(selectedAccount.id, name, balance, entryFlag)
         val bankAccountDAO = BankAccountDAO(this@EditPaymentEntryActivity)
         bankAccountDAO.updateBankAccount(bankAccount)
-        println("omaigaa")
 
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)

@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.TextView
 import com.example.littletoothwallet.R
-import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -27,9 +26,6 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val connectionBD = ConnectionBD(this@MainActivity)
-        val database = connectionBD.writableDatabase
 
         // busca a variavel de texto e gera um random baseado o java util
         val loadingTextView = findViewById<TextView>(R.id.loading_strings)

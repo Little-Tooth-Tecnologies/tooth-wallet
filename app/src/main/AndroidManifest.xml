@@ -54,6 +54,10 @@
             android:name=".controller.EditPaymentEntryActivity">
         </activity>
 
+        <activity
+            android:name=".controller.EditExpenseActivity">
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

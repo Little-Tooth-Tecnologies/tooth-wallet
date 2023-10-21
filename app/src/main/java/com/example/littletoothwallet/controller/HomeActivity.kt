@@ -1,7 +1,6 @@
 package com.example.littletoothwallet.controller
 
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.littletoothwallet.R
 import com.example.littletoothwallet.adapter.BankAccountsAdapter
 import com.example.littletoothwallet.adapter.ExpensesAdapter
-import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.example.littletoothwallet.model.dao.BankAccountDAO
 import com.example.littletoothwallet.model.dao.OutgoingDAO
 import com.example.littletoothwallet.model.dto.BankAccount
@@ -31,22 +29,18 @@ class HomeActivity : BaseActivity() {
         recyclerViewBA = findViewById(R.id.RecyclerView)
         recyclerViewEX = findViewById(R.id.RecyclerViewExpense)
 
-        val connectionBD : ConnectionBD = ConnectionBD(this@HomeActivity)
-        val database : SQLiteDatabase = connectionBD.writableDatabase
-
         val bankAccountsDAO = BankAccountDAO(this@HomeActivity)
         bankAccounts = bankAccountsDAO.getAllBankAccounts()
         val outgoingsDAO = OutgoingDAO(this@HomeActivity)
         expenses = outgoingsDAO.getAllOutgoings()
 
-        bankAccountsAdapter = BankAccountsAdapter(this@HomeActivity, bankAccounts)
-        recyclerViewBA.adapter = bankAccountsAdapter
-        recyclerViewBA.layoutManager = LinearLayoutManager(this@HomeActivity)
-
         expensesAdapter = ExpensesAdapter(this@HomeActivity, expenses)
         recyclerViewEX.adapter = expensesAdapter
         recyclerViewEX.layoutManager = LinearLayoutManager(this@HomeActivity)
 
+        bankAccountsAdapter = BankAccountsAdapter(this@HomeActivity, bankAccounts, expensesAdapter)
+        recyclerViewBA.adapter = bankAccountsAdapter
+        recyclerViewBA.layoutManager = LinearLayoutManager(this@HomeActivity)
 
     }
 

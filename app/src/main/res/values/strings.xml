@@ -85,6 +85,7 @@
     <string name="paymentEntry_colorValue">Cor da Conta</string>
     <string name="expenseEntry_topText">Adicionar Despesa</string>
     <string name="expenseEntry_topText_underlined"><u>Adicionar Despesa</u></string>
+    <string name="expenseEntry_topText_underlined_edit"><u>Editar Despesa</u></string>
     <string name="expenseEntry_entryTitle">Titulo da Despesa</string>
     <string name="expenseEntry_entryMethod">Metódo de Pagamento</string>
     <string name="toast_Success">Adicionado com sucesso!</string>
@@ -101,5 +102,8 @@
     <string name="confirm_delete_no">Cancelar</string>
     <string name="toast_SuccessDelete">Excluido com sucesso!</string>
     <string name="toast_FailureDelete">Falha ao Deletar!</string>
+
+    // Expenses Dialog Constants
+    <string name="confirm_delete_Expense">Deseja excluir essa despesa?</string>
 
 </resources>

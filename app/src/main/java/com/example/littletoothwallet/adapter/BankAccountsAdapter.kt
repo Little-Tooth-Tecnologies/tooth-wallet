@@ -1,6 +1,5 @@
 package com.example.littletoothwallet.adapter
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
@@ -18,7 +17,7 @@ import com.example.littletoothwallet.model.dao.BankAccountDAO
 import com.example.littletoothwallet.model.dto.BankAccount
 import com.google.gson.Gson
 
-class BankAccountsAdapter(private val context: Context, private val bankAccounts: MutableList<BankAccount>) : RecyclerView.Adapter<BankAccountsAdapter.MyViewHolder>() {
+class BankAccountsAdapter(private val context: Context, val bankAccounts: MutableList<BankAccount>, private val outgoingAdapter: ExpensesAdapter) : RecyclerView.Adapter<BankAccountsAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.bankaccount_row, parent, false)
@@ -78,11 +77,9 @@ class BankAccountsAdapter(private val context: Context, private val bankAccounts
                         R.string.confirm_delete_yes
                     ) { _, _ ->
                         val bankAccountsDAO = BankAccountDAO(context)
-                        bankAccountsDAO.deleteBankAccount(currentAccount)
+                        bankAccountsDAO.deleteBankAccount(currentAccount, outgoingAdapter)
                         bankAccounts.removeAt(position)
-                        (context as Activity).runOnUiThread {
-                            notifyItemRemoved(position)
-                        }
+                        notifyItemRemoved(position)
                     }
                     .setNegativeButton(
                         R.string.confirm_delete_no

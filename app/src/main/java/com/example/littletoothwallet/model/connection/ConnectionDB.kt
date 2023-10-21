@@ -23,7 +23,7 @@ class ConnectionBD(contexto : Context) : SQLiteOpenHelper(contexto, NAME,null, V
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "out_name VARCHAR NOT NULL," +
                 "out_price FLOAT NOT NULL," +
-                "out_date DATE NOT NULL," +
+                "out_date TEXT NOT NULL," +
                 "bank_accounts_id INTEGER NOT NULL," +
                 "FOREIGN KEY (bank_accounts_id) REFERENCES bank_accounts (id)" +
                 ")")

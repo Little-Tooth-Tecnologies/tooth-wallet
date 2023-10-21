@@ -1,10 +1,12 @@
 package com.example.littletoothwallet.model.dao
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.widget.Toast
 import com.example.littletoothwallet.R
+import com.example.littletoothwallet.adapter.ExpensesAdapter
 import com.example.littletoothwallet.model.connection.ConnectionBD
 import com.example.littletoothwallet.model.dto.BankAccount
 
@@ -42,12 +44,17 @@ class BankAccountDAO(private val context: Context) {
         database.update("bank_accounts", values, selection, selectionArgs)
     }
 
-    fun deleteBankAccount(account: BankAccount) {
+    fun deleteBankAccount(account: BankAccount, adapter: ExpensesAdapter) {
         val selection = "id = ?"
         val selectionArgs = arrayOf(account.id.toString())
         val result = database.delete("bank_accounts", selection, selectionArgs)
         if (result > 0) {
-            Toast.makeText(context, context.getString(R.string.toast_SuccessDelete), Toast.LENGTH_SHORT).show()
+            val outgoingResult = database.delete("outgoing", "bank_accounts_id = ?", selectionArgs)
+            if (outgoingResult > 0) {
+                adapter.expenses.clear()
+                adapter.notifyDataSetChanged()
+                Toast.makeText(context, context.getString(R.string.toast_SuccessDelete), Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(context, context.getString(R.string.toast_FailureDelete), Toast.LENGTH_SHORT).show()
         }
@@ -68,5 +75,26 @@ class BankAccountDAO(private val context: Context) {
         }
         cursor.close()
         return accounts
+    }
+
+    @SuppressLint("Range")
+    fun getBankAccount(bankAccountId: Long): BankAccount? {
+        val selectQuery = "SELECT  * FROM bank_accounts WHERE id = $bankAccountId"
+        val cursor = database.rawQuery(selectQuery, null)
+
+        var bankAccount: BankAccount? = null
+
+        if (cursor.moveToFirst()) {
+            val id = cursor.getLong(cursor.getColumnIndex("id"))
+            val name = cursor.getString(cursor.getColumnIndex("ac_name"))
+            val balance = cursor.getDouble(cursor.getColumnIndex("ac_balance"))
+            val flag = cursor.getString(cursor.getColumnIndex("ac_flag"))
+
+            bankAccount = BankAccount(id, name, balance, flag)
+        }
+        cursor.close()
+
+
+        return bankAccount
     }
 }

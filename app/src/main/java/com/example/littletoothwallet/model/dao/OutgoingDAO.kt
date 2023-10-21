@@ -16,30 +16,44 @@ class OutgoingDAO(private val context: Context) {
             put("out_name", outgoing.name)
             put("out_price", outgoing.price)
             put("out_date", outgoing.date)
-            put("bank_accounts_id", outgoing.bankAccountsId)
+            put("bank_accounts_id", outgoing.bankAccountId)
         }
 
         database.insert("outgoing", null, values)
+
+        val bankAccountDAO = BankAccountDAO(context)
+        val bankAccount = bankAccountDAO.getBankAccount(outgoing.bankAccountId)
+        bankAccount!!.balance -= outgoing.price
+        bankAccountDAO.updateBankAccount(bankAccount!!)
     }
 
-    fun updateOutgoing(outgoing: Outgoing) {
+    fun updateOutgoing(outgoing: Outgoing, oldPrice: Double) {
         val values = ContentValues().apply {
             put("out_name", outgoing.name)
             put("out_price", outgoing.price)
             put("out_date", outgoing.date)
-            put("bank_accounts_id", outgoing.bankAccountsId)
+            put("bank_accounts_id", outgoing.bankAccountId)
         }
 
         val selection = "id = ?"
         val selectionArgs = arrayOf(outgoing.id.toString())
-
         database.update("outgoing", values, selection, selectionArgs)
+
+        val bankAccountDAO = BankAccountDAO(context)
+        val bankAccount = bankAccountDAO.getBankAccount(outgoing.bankAccountId)
+        bankAccount!!.balance = (bankAccount.balance + oldPrice) - outgoing.price
+        bankAccountDAO.updateBankAccount(bankAccount)
     }
 
     fun deleteOutgoing(outgoing: Outgoing) {
         val selection = "id = ?"
         val selectionArgs = arrayOf(outgoing.id.toString())
         database.delete("outgoing", selection, selectionArgs)
+
+        val bankAccountDAO = BankAccountDAO(context)
+        val bankAccount = bankAccountDAO.getBankAccount(outgoing.bankAccountId)
+        bankAccount!!.balance += outgoing.price
+        bankAccountDAO.updateBankAccount(bankAccount!!)
     }
 
     fun getAllOutgoings(): MutableList<Outgoing> {
