@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LazyRegister1Fragment"
+    tools:context=".controller.LazyRegister1Fragment"
     android:background="@drawable/bg_app_begin_box">
 
 

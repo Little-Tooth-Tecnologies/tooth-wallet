@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_walkthrough"
-    tools:context=".LoginActivity">
+    tools:context=".controller.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/cellphoneDialog"
@@ -92,7 +92,7 @@
             android:id="@+id/button"
             style="@style/buttonYellow"
             android:text="@string/login_emailInputButton"
-            android:onClick="Login"
+            android:onClick="login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

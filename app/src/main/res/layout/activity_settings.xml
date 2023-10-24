@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_walkthrough"
-    tools:context=".SettingsActivity"
+    tools:context=".controller.SettingsActivity"
     >
 
     <androidx.cardview.widget.CardView
@@ -41,7 +41,7 @@
                 android:id="@+id/imageView7"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:onClick="startHomeActivity"
+                android:onClick="cancelActivity"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.086"
@@ -52,7 +52,7 @@
             <FrameLayout
                 android:layout_width="53dp"
                 android:layout_height="54dp"
-                android:onClick="startHomeActivity"
+                android:onClick="cancelActivity"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.924"
@@ -95,41 +95,13 @@
             <Button
                 android:id="@+id/buttonLogoff"
                 style="@style/buttonRed_logout"
-                android:text="@string/settings_logout_button"
                 android:onClick="logoutConfirmation"
+                android:text="@string/settings_logout_button"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/settingsText2"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/settingsText"
-                android:layout_width="136dp"
-                android:layout_height="83dp"
-                android:text="Colocar umas configs aqui :)"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.108" />
-
-            <TextView
-                android:id="@+id/settingsText2"
-                android:layout_width="195dp"
-                android:layout_height="68dp"
-                android:text="(o botão de deslogar funciona)"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.699" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/button"
@@ -142,6 +114,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="2.5" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/darkMode"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.088" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.218" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
